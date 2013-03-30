@@ -1,7 +1,7 @@
 Simpletastic
 ============
 
-Simplestastic is a very lightweight framework (actually just a few of lines of code) written in Sass that greatly simplifies the creation of responsive and fluid grids. It is designed for people tired of complex frameworks with tons and sometimes useless options, who want to write something quick and simple.
+Simplestastic is a very lightweight framework (actually just a few lines of code) written in Sass that greatly simplifies the creation of responsive and fluid grids. It is designed for people tired of complex frameworks with tons and sometimes useless options, who want to write something quick and simple.
 
 Forget about calculating weird percentages or use some magic numbers, inspired by [this article](http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/) by Harry Roberts, instead of defining a class name like `.span-3` or `.large-6`, which has little meaning and it is not very easy to memorize, Simpletastic abstracts these widths into comprehensible fractions. For example: you would like to do 3 columns of which every one is **one third** of the available space `@include column (1, 3)`, or **one half** `@include column (1, 2)`, or even **four twelfths** `@include column (4, 12)`. Any combination that suits your needs is possible.
 
