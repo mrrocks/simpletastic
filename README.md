@@ -5,7 +5,7 @@ Simplestastic es un pequeño framework escrito en SASS (.scss) que facilita enor
 
 Uso
 
-```css
+```scss
 .container { %extend %grid__row; }
 
 .column { @include grid-column(1, 3); }
