@@ -36,20 +36,16 @@ Then just 2 steps :)
 
 The only setting is the gap size, by default is 2%, but you can override this and use any percentage value.
 
-```sass
-    $default-gap-width: 2% !default;
+```scss
+$default-gap-width: 2% !default;
 ```
 
 Also you can override the default gap size for any column, just adding one more value to the column mixin, like this:
 
 ```scss
-li {
-    @include column(1, 3, 0%);
-}
+li { @include column(1, 3, 0%); }
 
 // Or…
 
-li {
-    @include column(1, 3, 10%);
-}
+li { @include column(1, 3, 10%); }
 ```
