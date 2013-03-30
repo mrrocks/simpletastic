@@ -2,18 +2,20 @@
 
 $default-gap-width: 2% !default;
 
+
 // Grid Placeholders
 
-%grid__row {
+%row {
     letter-spacing: -0.31em; // Remove text space between elements
 }
 
-%grid__column {
+%column {
     display: inline-block;
     letter-spacing: normal; // Reset text space
 
     &:last-child { margin-right: 0; }
 }
+
 
 // Grid Logic
 
@@ -31,7 +33,7 @@ $default-gap-width: 2% !default;
 }
 
 @mixin grid-column($selected-columns, $all-columns, $gap-width: $default-gap-width) {
-    @extend %grid__column;
+    @extend %column;
     margin-right: $gap-width;
     width: calculate-column-width($selected-columns, $all-columns, $gap-width);
 }
