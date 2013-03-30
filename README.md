@@ -19,11 +19,11 @@ In your main stylesheet:
 ###Basic Use - Just 2 steps :)
 
 ```sass
-// First: Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns
+/* First: Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns */
 
     ul { @extend %grid__row; }
 
-// Second: Include the mixin that defines the column with, in this case one third of the available space
+/* Second: Include the mixin that defines the column with, in this case one third of the available space */
 
     li { @include grid-column(1, 3); }
 ```
