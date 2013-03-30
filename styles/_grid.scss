@@ -12,8 +12,6 @@ $default-gap-width: 2% !default;
 %column {
     display: inline-block;
     letter-spacing: normal; // Reset text space
-
-    &:last-child { margin-right: 0; }
 }
 
 
@@ -32,8 +30,10 @@ $default-gap-width: 2% !default;
     @return $column-width + $gap-width * ($selected-columns - 1);
 }
 
-@mixin grid-column($selected-columns, $all-columns, $gap-width: $default-gap-width) {
+@mixin column($selected-columns, $all-columns, $gap-width: $default-gap-width) {
     @extend %column;
     margin-right: $gap-width;
     width: calculate-column-width($selected-columns, $all-columns, $gap-width);
+
+    &:nth-child(#{$all-columns}n) { margin-right: 0; }
 }

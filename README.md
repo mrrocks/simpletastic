@@ -27,7 +27,7 @@ Then just 2 steps :)
         @extend %row;
     }
     ```
-2. Then choose any possible combinationInclude in the child element/s the `column` mixin to define the column width, in this case one third of the available space.
+2. Then include the `column` mixin in the child element/s, in this case one third of the available space.
 
     ```scss
     li {
