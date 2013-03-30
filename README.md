@@ -5,7 +5,8 @@ Simplestastic is a super lightweight framework written in SASS that make it supe
 
 ### Requirements
 
-- Sass 3.2+
+- Sass 3.2+ (Simplestatic use Sass silent classes which means that the classes never get compiled to CSS until they are explicitly expanded.)
+
 
 ##Getting started
 
@@ -34,7 +35,7 @@ Then just 2 steps :)
 
 ##Settings
 
-The only setting is the gap size, by default is 2%, but you can override this and use any percentage value.
+The only setting is the `gap` size, by default is `2%`, but you can override this and use any percentage value. To remove it you can use `none` instead of any value.
 
 ```scss
 $default-gap-width: 2% !default;
