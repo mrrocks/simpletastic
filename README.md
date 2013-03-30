@@ -19,12 +19,12 @@ In your main stylesheet:
 
 Just 2 steps :)
 
-1. Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns
+1. Extend `%grid-row` invisible class to any `.class-name` or `<tag>` that is going to contain the columns
 
 ```scss
-ul { @extend %grid__row; }
+ul { @extend %grid-row; }
 ```
-2. Include the mixin that defines the column width, in this case one third of the available space
+2. Include the `mixin` to define the column width, in this case one third of the available space
 
 ```scss
 li { @include grid-column(1, 3); }
