@@ -11,8 +11,7 @@ Uso
 
     .container { %extend %grid__row; }
 
-// Include
+// Include to define the column with, in this case one third of the available space
 
     .column { @include grid-column(1, 3); }
-
 ```
