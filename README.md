@@ -7,11 +7,11 @@ Simplestastic es un pequeño framework escrito en SASS (.scss) que facilita enor
 
 ```scss
 
-// First. Extend the row invisible class to any class or object is going to contain the columns
+// First: Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns
 
     .container { @extend %grid__row; }
 
-// Include to define the column with, in this case one third of the available space
+// Second: Include the mixin that defines the column with, in this case one third of the available space
 
     .column { @include grid-column(1, 3); }
 ```
