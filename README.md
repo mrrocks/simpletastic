@@ -1,14 +1,16 @@
 Simpletastic
 ============
 
-Simplestastic is a super lightweight framework written in SASS that make it super easy create to fluid grids.
+Simplestastic is a very light framework written in Sass that greatly simplifies the creation of responsive and fluid grids. Is for people who want something quick and simple, tired of complex frameworks with thousand options.
+
+Forget about calculate exact percentages or use magic numbers, inspired by [this article](http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/) by Harry Roberts, instead of defining a class name like `.span-3`, which has little meaning and it is not very easy to memorize, Simpletastic abstracts these widths into comprehensible fractions. For example: you would like to do 3 columns of **one third** of the available space `@include column (1, 3)`, or **one half** `@include column (1, 2)`, or even **four twelfths** `@include column (4, 12)`, any combination that suits your needs is possible.
+
 
 ### Requirements
 
-- Sass 3.2+ (Simplestatic use Sass silent classes which means that the classes never get compiled to CSS until they are explicitly expanded.)
+- Sass 3.2+ (Silent classes are used, which means that the classes never get compiled to CSS until they are explicitly expanded into another class.)
 
-
-##Getting started
+### Getting started
 
 In your main stylesheet:
 
@@ -25,7 +27,7 @@ Then just 2 steps :)
         @extend %row;
     }
     ```
-2. Include in the child element/s the `column` mixin to define the column width, in this case one third of the available space.
+2. Then choose any possible combinationInclude in the child element/s the `column` mixin to define the column width, in this case one third of the available space.
 
     ```scss
     li {
@@ -33,7 +35,9 @@ Then just 2 steps :)
     }
     ```
 
-##Settings
+    ![Example 1](http://imgur.com/5nVsVU9)
+
+### Settings
 
 The only default setting is the `gap` size, by default is set to `2%`, but you can override this and use any percentage value, including `0` to remove it.
 
