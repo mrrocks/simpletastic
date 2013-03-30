@@ -45,7 +45,7 @@ The only default setting is the `gap` size, by default is set to `2%`, but you c
 $default-gap-width: 2% !default;
 ```
 
-Also you can override the gap size for any column, just pass the size as a new parameter in the column mixin.
+Also you can override the gap size for any column, just optionally pass to the column mixin the size as the third parameter.
 
 ```scss
 li { @include column(1, 3, 0%); }
