@@ -35,7 +35,7 @@ Then just 2 steps :)
     }
     ```
 
-    ![Example 1](http://i.imgur.com/osAta1H.png)
+    ![Example 1](http://i.imgur.com/XZZNtXj.png)
 
 ### Settings
 
