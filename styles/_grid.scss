@@ -1,0 +1,37 @@
+// Values
+
+$default-gap-width: 2% !default;
+
+// Grid Placeholders
+
+%grid__row {
+    letter-spacing: -0.31em; // Remove text space between elements
+}
+
+%grid__column {
+    display: inline-block;
+    letter-spacing: normal; // Reset text space
+
+    &:last-child { margin-right: 0; }
+}
+
+// Grid Logic
+
+@function calculate-column-width($selected-columns, $all-columns, $gap-width) {
+
+    $parent-width: 100%;
+    $all-gaps-width: $gap-width * ($all-columns - 1);
+    $column-width: (($parent-width - $all-gaps-width) / $all-columns) * $selected-columns;
+
+    @if $selected-columns == 1 {
+        @return $column-width;
+    }
+
+    @return $column-width + $gap-width * ($selected-columns - 1);
+}
+
+@mixin grid-column($selected-columns, $all-columns, $gap-width: $default-gap-width) {
+    @extend %grid__column;
+    margin-right: $gap-width;
+    width: calculate-column-width($selected-columns, $all-columns, $gap-width);
+}
