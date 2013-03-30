@@ -36,7 +36,7 @@ Then just 2 steps :)
 
 The only setting is the gap size, by default is 2%, but you can override this and use any percentage value.
 
-```scss
+```sass
     $default-gap-width: 2% !default;
 ```
 
