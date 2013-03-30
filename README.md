@@ -21,11 +21,11 @@ Just 2 steps :)
 
 1. Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns
 
-```sass
+```scss
 ul { @extend %grid__row; }
 ```
 2. Include the mixin that defines the column width, in this case one third of the available space
 
-```sass
+```scss
 li { @include grid-column(1, 3); }
 ```
