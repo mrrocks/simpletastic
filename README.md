@@ -1,14 +1,13 @@
-Simpletastic - Fluid Grid System
+Simpletastic
 ============
 
 Simplestastic is a super lightweight framework written in SASS that make it super easy create to fluid grids.
 
-Requirements
-===
+### Requirements
+
 - Sass 3.2+
 
-Install Instructions
-===
+### Install Instructions
 
 In your main stylesheet:
 
@@ -16,14 +15,17 @@ In your main stylesheet:
 @import "grid";
 ```
 
-###Basic Use - Just 2 steps :)
+###Getting started
+
+Just 2 steps :)
+
+1. Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns
 
 ```sass
-/* First: Extend "%grid__row" invisible class to any .class or <object> that is going to contain the columns */
+ul { @extend %grid__row; }
+```
+2. Include the mixin that defines the column width, in this case one third of the available space
 
-    ul { @extend %grid__row; }
-
-/* Second: Include the mixin that defines the column with, in this case one third of the available space */
-
-    li { @include grid-column(1, 3); }
+```sass
+li { @include grid-column(1, 3); }
 ```
