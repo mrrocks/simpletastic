@@ -35,13 +35,13 @@ Then just 2 steps :)
 
 ##Settings
 
-The only setting is the `gap` size, by default is `2%`, but you can override this and use any percentage value. To remove it you can use `none` instead of any value.
+The only default setting is the `gap` size, by default is set to `2%`, but you can override this and use any percentage value, including `0` to remove it.
 
 ```scss
 $default-gap-width: 2% !default;
 ```
 
-Also you can override the default gap size for any column, just adding one more value to the column mixin, like this:
+Also you can override the gap size for any object, just adding one more value to the column mixin.
 
 ```scss
 li { @include column(1, 3, 0%); }
