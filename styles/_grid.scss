@@ -19,9 +19,9 @@ $default-gap-width: 2% !default;
 
 @function calculate-column-width($selected-columns, $all-columns, $gap-width) {
 
-    $parent-width: 100%;
+    $available-space: 100%;
     $all-gaps-width: $gap-width * ($all-columns - 1);
-    $column-width: (($parent-width - $all-gaps-width) / $all-columns) * $selected-columns;
+    $column-width: (($available-space - $all-gaps-width) / $all-columns) * $selected-columns;
 
     @if $selected-columns == 1 {
         @return $column-width;
