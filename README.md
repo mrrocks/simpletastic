@@ -22,16 +22,12 @@ Then just 2 steps :)
 1. Extend the `%row` invisible class to any `.class-name` or `<tag>` that is going to be the container for the columns.
 
     ```scss
-    ul {
-        @extend %row;
-    }
+    @extend %row;
     ```
 2. Then include the `column` mixin in the child element(s). In this case one third of the available space.
 
     ```scss
-    li {
-        @include column(1 of 3);
-    }
+    @include column(1 of 3);
     ```
 
     ![Simple](http://i.imgur.com/AQOqGNe.png)
