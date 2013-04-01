@@ -30,7 +30,7 @@ Then just 2 steps :)
     @include column(1 of 3);
     ```
 
-    ![Simple](http://i.imgur.com/AQOqGNe.png)
+    ![Simple](http://i.imgur.com/ClDn51U.png)
 
 ### Options
 
