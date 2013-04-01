@@ -17,7 +17,7 @@ In your main stylesheet:
 @import "grid";
 ```
 
-Then just 2 steps :)
+Then just 2 steps, no need of any previous configuration :)
 
 1. Extend the `%row` invisible class to any `.class-name` or `<tag>` that is going to be the container for the columns.
 
@@ -34,7 +34,7 @@ Then just 2 steps :)
 
 ### Options
 
-1. **Nesting**. For nested columns instead of using the mixin columns, it would be nested-columns adding a new `paramenter` with the parent fractions, like this:
+1. **Nesting**. For nested columns instead of using the mixin `columns`, it would be `nested-columns` adding a new `paramenter` with the parent fractions, like this:
 
     ```scss
     @include nested-column(1 of 2, 3 of 4);
@@ -43,6 +43,10 @@ Then just 2 steps :)
     ![Nested](http://i.imgur.com/QZRKQso.png)
 
 2. **Automatic Rows**. Only for this case an extra `@include` who removes the `margin-right` every `N` times is needed:
+
+    ```scss
+    @include row-each(1);
+    ```
 
     ![Automatic Rows](http://i.imgur.com/SnJFuq2.png)
 
