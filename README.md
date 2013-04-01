@@ -41,12 +41,12 @@ Then just 2 steps :)
 1. **Nesting**. For nested columns instead of using the mixin columns, it would be nested-columns adding a new `paramenter` with the parent fractions, like this:
 
     ```scss
-        @include nested-column(1 of 2, 3 of 4);
+    @include nested-column(1 of 2, 3 of 4);
     ```
 
     ![Nested](http://i.imgur.com/dNMR8Eu.png)
 
-2. **Automatic Rows**. Only for this case an extra `@include` who removes the `margin-right` each N times is needed:
+2. **Automatic Rows**. Only for this case an extra `@include` who removes the `margin-right` every `N` times is needed:
 
     ![Automatic Rows](http://i.imgur.com/plknhKo.png)
 
