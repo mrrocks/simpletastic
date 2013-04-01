@@ -38,7 +38,7 @@
 //
 //  Example:
 //
-//      @include column(1 of 6);      ⟵ Set the size of the column of one sixth of the available space
+//      @include column(1 of 6);    ⟵ Set the size of the column of one sixth of the available space
 
 
     @mixin column($fractions: $columns of $container-columns, $gutter-width: $default-gutter-width) {
@@ -59,7 +59,7 @@
 //
 //  Example:
 //
-//      @include column(1 of 6, 4 of 12);      ⟵ Set the size of the column of one sixth of the four twelfths of the parent container.
+//      @include column(1 of 6, 4 of 12);   ⟵ Set the size of the column of one sixth of the four twelfths of the parent container.
 
     @mixin nested-column($fractions: $columns of $container-columns, $parent-fractions: $parent-columns of $parent-container-columns, $gutter-width: $default-gutter-width) {
 
