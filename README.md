@@ -38,7 +38,11 @@ Then just 2 steps :)
 
 ### Options
 
-1. **Nesting**. For nested columns just add a new `paramenter` with the parent fractions, like this:
+1. **Nesting**. For nested columns instead of using the mixin columns, it would be nested-columns adding a new `paramenter` with the parent fractions, like this:
+
+    ```scss
+        @include nested-column(1 of 2, 3 of 4);
+    ```
 
     ![Nested](http://i.imgur.com/dNMR8Eu.png)
 
