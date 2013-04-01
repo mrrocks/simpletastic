@@ -38,11 +38,13 @@ Then just 2 steps :)
 
 ### Options
 
-1. Nesting: For nested columns just add a new paramenter with the parent fractions, like this:
+1. **Nesting**. For nested columns just add a new paramenter with the parent fractions, like this:
 
-![Nested](http://i.imgur.com/dNMR8Eu.png)
+    ![Nested](http://i.imgur.com/dNMR8Eu.png)
 
-![Automatic Rows](http://i.imgur.com/plknhKo.png)
+2. **Automatic Rows**. An extra @include to remove margn each N times is needed:
+
+    ![Automatic Rows](http://i.imgur.com/plknhKo.png)
 
 You can also override the gutter size for any column by simply passing the new size to the column mixin using a third parameter.
 
