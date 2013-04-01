@@ -19,10 +19,10 @@ In your main stylesheet:
 
 Then just 2 steps, no need of any previous configuration :)
 
-1. Extend the `%row` invisible class to any `.class-name` or `<tag>` that is going to be the container for the columns.
+1. Extend the `%row` invisible class to any `.class-name` or `<tag>` that is going to be the container for the columns. This is basically a clear-fix.
 
     ```scss
-    @extend %row; /* This is basically a clear-fix. */
+    @extend %row;
     ```
 2. And include the `column` mixin in the child element(s). In this case one third of the available space.
 
