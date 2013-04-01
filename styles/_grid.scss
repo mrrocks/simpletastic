@@ -2,11 +2,12 @@
 //  ★ SETTINGS
 
     $default-gutter-width: 2% !default;
+    $container-width: 100%;
 
 
 //  ★ SILENT CLASSES
 
-//  Extend this class to any container for columns.
+//  Extend this class to any columns container.
 
     %row { letter-spacing: -0.31em; }
 
@@ -16,38 +17,58 @@
 
 //  This function calculates the size (width + gutter) of one column based on the choosen fractions.
 
-    @function calculate-column-width($selected-columns, $all-columns, $gutter-width) {
+    @function calculate-column-width($columns, $container-columns, $gutter-width) {
 
-        $available-space: 100%;
-        $all-gutters-width: $gutter-width * ($all-columns - 1);
-        $column-width: (($available-space - $all-gutters-width) / $all-columns) * $selected-columns;
+        $all-gutters-width: $gutter-width * ($container-columns - 1);
+        $column-width: (($container-width - $all-gutters-width) / $container-columns) * $columns;
 
-        @if $selected-columns == 1 {
+        @if $columns == 1 {
             @return $column-width;
         }
 
-        @return $column-width + $gutter-width * ($selected-columns - 1);
+        @return $column-width + $gutter-width * ($columns - 1);
     }
 
 
 //  ★ MIXINS
 
 
-//  This mixin set all the layout style for a column.
+//  This mixin set all the layout style for the columns.
 //  Remember that it works with fractions, like one third, or two fourths, etc. Any combination is possible.
 //
 //  Example:
 //
-//  @include column(1, 6);      ⟵ Set the size of the column of one sixth of the available space
+//      @include column(1 of 6);      ⟵ Set the size of the column of one sixth of the available space
 
 
-    @mixin column($selected-columns, $all-columns, $gutter-width: $default-gutter-width) {
+    @mixin column($fractions: $columns of $container-columns, $gutter-width: $default-gutter-width) {
+
+        $columns: nth($fractions, 1);
+        $container-columns: nth($fractions, 3);
+
         display: inline-block;
         margin-right: $gutter-width;
-        width: calculate-column-width($selected-columns, $all-columns, $gutter-width);
+        width: calculate-column-width($columns, $container-columns, $gutter-width);
         letter-spacing: normal;
 
         &:last-of-type { margin-right: 0; }
+    }
+
+
+//  This mixin set all the layout styles for the nested columns.
+//
+//  Example:
+//
+//      @include column(1 of 6, 4 of 12);      ⟵ Set the size of the column of one sixth of the four twelfths of the parent container.
+
+    @mixin nested-column($fractions: $columns of $container-columns, $parent-fractions: $parent-columns of $parent-container-columns, $gutter-width: $default-gutter-width) {
+
+        $parent-columns: nth($parent-fractions, 1);
+        $parent-container-columns: nth($parent-fractions, 3);
+
+        $nested-gutter-width: ($parent-container-columns / $parent-columns) * $gutter-width;
+
+        @include column($fractions, $nested-gutter-width);
     }
 
 
@@ -55,18 +76,10 @@
 //
 //  Example:
 //
-//  @include column(1, 6);      ⟵ Set the size of the column of one sixth of the available space
-//  @include grid(6);           ⟵ Removes gutter each 6 columns
+//      @include column(1 of 6);    ⟵ Set the size of the column of one sixth of the available space
+//      @include grid(6);           ⟵ Removes gutter each 6 columns
 
 
     @mixin grid($column-number) {
         &:nth-of-type(#{$column-number}n) { margin-right: 0; }
     }
-
-
-
-
-
-// @mixin nested($selected-columns, $all-columns) {
-//     margin-right: $gutter-width;
-// }
