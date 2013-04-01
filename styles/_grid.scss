@@ -80,6 +80,6 @@
 //      @include grid(6);           ⟵ Removes gutter each 6 columns
 
 
-    @mixin grid($column-number) {
+    @mixin row-each($column-number) {
         &:nth-of-type(#{$column-number}n) { margin-right: 0; }
     }
