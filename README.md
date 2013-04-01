@@ -40,11 +40,11 @@ Then just 2 steps :)
     @include nested-column(1 of 2, 3 of 4);
     ```
 
-    ![Nested](http://i.imgur.com/dNMR8Eu.png)
+    ![Nested](http://i.imgur.com/QZRKQso.png)
 
 2. **Automatic Rows**. Only for this case an extra `@include` who removes the `margin-right` every `N` times is needed:
 
-    ![Automatic Rows](http://i.imgur.com/plknhKo.png)
+    ![Automatic Rows](http://i.imgur.com/SnJFuq2.png)
 
 ### Settings
 
