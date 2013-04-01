@@ -34,11 +34,11 @@ Then just 2 steps :)
     }
     ```
 
-    ![Simple](http://imgur.com/hBU3lcG)
+    ![Simple](http://i.imgur.com/AQOqGNe.png)
 
 ### Options
 
-For nested columns inside another column you just need to add the parent fractions, like this:
+1. Nesting: For nested columns just add a new paramenter with the parent fractions, like this:
 
 ![Nested](http://i.imgur.com/dNMR8Eu.png)
 
