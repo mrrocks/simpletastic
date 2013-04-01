@@ -34,15 +34,15 @@ Then just 2 steps :)
     }
     ```
 
-    ![Example 1](http://i.imgur.com/oWLpx9H.png)
+    ![Simple](http://imgur.com/hBU3lcG)
 
-### Settings
+### Options
 
-The only default setting is the `gutter` size which, by default, is set to `2%`, can be overridden. Any percentage value, including `0` to remove it, can be used.
+For nested columns inside another column you just need to add the parent fractions, like this:
 
-```scss
-$default-gutter-width: 2% !default;
-```
+![Nested](http://i.imgur.com/dNMR8Eu.png)
+
+![Automatic Rows](http://i.imgur.com/plknhKo.png)
 
 You can also override the gutter size for any column by simply passing the new size to the column mixin using a third parameter.
 
@@ -53,3 +53,15 @@ li { @include column(1 of 3, 0%); }
 
 li { @include column(1 of 3, 10%); }
 ```
+
+### Settings
+
+The only default setting is the `gutter` size which, by default, is set to `2%`, can be overridden. Any percentage value, including `0` to remove it, can be used.
+
+```scss
+$default-gutter-width: 2% !default;
+```
+
+
+
+
