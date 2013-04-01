@@ -24,7 +24,7 @@ Then just 2 steps :)
     ```scss
     @extend %row;
     ```
-2. Then include the `column` mixin in the child element(s). In this case one third of the available space.
+2. Then include the `column` mixin in the child element(s). In this case one third of the available space. This is basically a clear-fix.
 
     ```scss
     @include column(1 of 3);
@@ -46,6 +46,14 @@ Then just 2 steps :)
 
     ![Automatic Rows](http://i.imgur.com/plknhKo.png)
 
+### Settings
+
+The only default setting is the `gutter` size which, by default, is set to `2%`, can be overridden. Any percentage value, including `0` to remove it, can be used.
+
+```scss
+$default-gutter-width: 2% !default;
+```
+
 You can also override the `gutter` size for any column by simply passing the new size to the column mixin using a third parameter.
 
 ```scss
@@ -55,15 +63,6 @@ li { @include column(1 of 3, 0%); }
 
 li { @include column(1 of 3, 10%); }
 ```
-
-### Settings
-
-The only default setting is the `gutter` size which, by default, is set to `2%`, can be overridden. Any percentage value, including `0` to remove it, can be used.
-
-```scss
-$default-gutter-width: 2% !default;
-```
-
 
 
 
