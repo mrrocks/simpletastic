@@ -38,15 +38,15 @@ Then just 2 steps :)
 
 ### Options
 
-1. **Nesting**. For nested columns just add a new paramenter with the parent fractions, like this:
+1. **Nesting**. For nested columns just add a new `paramenter` with the parent fractions, like this:
 
     ![Nested](http://i.imgur.com/dNMR8Eu.png)
 
-2. **Automatic Rows**. An extra @include to remove margn each N times is needed:
+2. **Automatic Rows**. Only for this case an extra `@include` who removes the `margin-right` each N times is needed:
 
     ![Automatic Rows](http://i.imgur.com/plknhKo.png)
 
-You can also override the gutter size for any column by simply passing the new size to the column mixin using a third parameter.
+You can also override the `gutter` size for any column by simply passing the new size to the column mixin using a third parameter.
 
 ```scss
 li { @include column(1 of 3, 0%); }
