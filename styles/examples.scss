@@ -75,26 +75,21 @@
         }
     }
 
-    .example-nested {
+    .example-nested > div {
+
+        &:nth-child(1) { @include column(1 of 4); }
+        &:nth-child(2) { @include column(3 of 4); background-color: $margin-green; padding: 0;}
+
         > div {
+            @extend %row;
+            background-color: $medium-blue;
 
-            &:nth-child(1) { @include column(1 of 4); }
-            &:nth-child(2) { @include column(3 of 4); background-color: $margin-green; padding: 0;}
-
-            > div {
-                @extend %row;
-                background-color: $medium-blue;
-
-                &:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
-                &:nth-child(3) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
-            }
+            &:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
+            &:nth-child(3) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
         }
     }
 
-    .example-grid {
-
-        > div {
-            @include column(1 of 3);
-            @include row-each(3);
-        }
+    .example-grid > div {
+        @include column(1 of 3);
+        @include row-each(3);
     }
