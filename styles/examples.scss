@@ -1,0 +1,100 @@
+    @import "grid";
+
+//  ★ RESPONSIVE
+
+    $break-small: 420px;
+    $break-large: 1024px;
+
+    @mixin respond-to($media) {
+        @if $media == handhelds {
+            @media only screen and (max-width: $break-small) { @content; }
+        }
+        @else if $media == medium-screens {
+            @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+        }
+        @else if $media == wide-screens {
+            @media only screen and (min-width: $break-large) { @content; }
+        }
+    }
+
+//  ★ COLORS
+
+    $dark-blue: #2F7099;
+    $medium-blue: #3F96CC;
+
+    $margin-green: #98E622;
+
+    $dark-green: #2F8299;
+    $light-green: #3FAECC;
+
+//  ★ EXAMPLES
+
+
+    * { box-sizing: border-box;  }
+
+    body {
+        margin: 0 auto;
+        margin: 5%;
+        line-height: 1.5;
+        font-family: "Helvetica Neue";
+    }
+
+    h1 { margin: 1em 0; }
+
+    div {
+        padding: 20px;
+        background-color: $medium-blue;
+        font-size: 14px;
+    }
+
+    section {
+        @extend %row;
+        background-color: $margin-green;
+        color: white;
+        text-align: center;
+    }
+
+    .example-simple > div {
+
+        &:nth-child(2n) { background-color: darken($medium-blue, 10%); }
+
+        @include respond-to(wide-screens) {
+            @include column(1 of 4);
+            &:before { content: "@include column(1 of 4);"; }
+        }
+
+        @include respond-to(medium-screens) {
+            @include column(2 of 4);
+            @include row-each(2);
+            &:before { content: "@include column(2 of 4); & @include row-each(2);"; }
+        }
+
+        @include respond-to(handhelds) {
+            @include column(1 of 1);
+            &:before { content: "@include column(1 of 1);"; }
+        }
+    }
+
+    .example-nested {
+        > div {
+
+            &:nth-child(1) { @include column(1 of 4); }
+            &:nth-child(2) { @include column(3 of 4); background-color: $margin-green; padding: 0;}
+
+            > div {
+                @extend %row;
+                background-color: $medium-blue;
+
+                &:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
+                &:nth-child(3) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
+            }
+        }
+    }
+
+    .example-grid {
+
+        > div {
+            @include column(1 of 3);
+            @include row-each(3);
+        }
+    }
