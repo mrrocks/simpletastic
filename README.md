@@ -2,7 +2,7 @@
 
 Simplestastic is a super lightweight framework (actually just **a few lines** of code) written in Sass that greatly simplifies the creation of fluid grids on responsive enviroments. It is designed for people tired of complex frameworks with tons of, sometimes, useless options, who want to write something quick and simple.
 
-Forget about calculating weird percentages or using some magic numbers, inspired by [this article](http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/) by Harry Roberts, instead of defining a class name like `.span-3` or `.large-6`, which has little meaning and is not very easy to memorize, let Simpletastic abstract these widths into comprehensible human-friendly fractions. For example: you can have 3 columns of which every one is **one third** of the available space `@include column (1, 3)`, or **one half** `@include column (1, 2)`, or even **four twelfths** `@include column (4, 12)`. Any combination that suits your needs is possible.
+Forget about calculating weird percentages or using magic numbers, inspired by [this article](http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/) by Harry Roberts, instead of defining a class name like `.span-3` or `.large-6`, which has little meaning and is not very easy to memorize, let Simpletastic abstract these widths into comprehensible human-friendly fractions. For example: you can have 3 columns of which every one is **one third** of the available space `@include column (1, 3)`, or **one half** `@include column (1, 2)`, or even **four twelfths** `@include column (4, 12)`. Any combination that suits your needs is possible.
 
 
 ### Requirements
@@ -17,7 +17,7 @@ In your main stylesheet:
 @import "grid";
 ```
 
-Then just 2 steps, no need of any previous configuration :)
+Then just 2 steps, without any previous configuration :)
 
 1. Extend the `%row` invisible class to any `.class-name` or `<tag>` that is going to be the container for the columns. This is basically a clear-fix.
 
@@ -42,7 +42,7 @@ Then just 2 steps, no need of any previous configuration :)
 
     ![Nested](http://i.imgur.com/QZRKQso.png)
 
-2. **Automatic Rows**. Only for this case an extra `@include` who removes the `margin-right` every `N` times is needed:
+2. **Automatic Rows**. Only for this case an extra `@include` which removes the `margin-right` every `N` times is needed:
 
     ```scss
     @include row-each(1);
@@ -58,7 +58,7 @@ The only default setting is the `gutter` size which, by default, is set to `2%`,
 $default-gutter-width: 2% !default;
 ```
 
-You can also override the `gutter` size for any column by simply passing the new size to the column mixin using a third parameter.
+You can also override the `gutter` for any column by simply passing the new size to the column mixin using a third parameter.
 
 ```scss
 li { @include column(1 of 3, 0%); }
@@ -67,6 +67,3 @@ li { @include column(1 of 3, 0%); }
 
 li { @include column(1 of 3, 10%); }
 ```
-
-
-
