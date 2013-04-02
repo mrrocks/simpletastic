@@ -67,3 +67,11 @@ li { @include column(1 of 3, 0%); }
 
 li { @include column(1 of 3, 10%); }
 ```
+
+### Support
+
+Honestly I didn't do too many compatibility testing. But I would say major modern browsers can handle it pretty much perfect.
+
+## Author
+
+Fran Pérez [@mrrocks](http://twitter.com/mrrocks)
