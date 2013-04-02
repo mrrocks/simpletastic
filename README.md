@@ -9,7 +9,7 @@ Forget about calculating weird percentages or using magic numbers, inspired by [
 
 - Sass 3.2+ (Silent classes are used, which means that the classes never get compiled to CSS until they are explicitly expanded into another class.)
 
-### Getting started
+## Getting started
 
 In your main stylesheet:
 
@@ -32,7 +32,7 @@ Then just 2 steps, without any previous configuration :)
 
     ![Simple](http://i.imgur.com/ClDn51U.png)
 
-### Options
+## Options
 
 1. **Nesting**. For nested columns instead of using the mixin `columns`, it would be `nested-columns` adding a new `paramenter` with the parent fractions, like this:
 
@@ -50,7 +50,7 @@ Then just 2 steps, without any previous configuration :)
 
     ![Automatic Rows](http://i.imgur.com/SnJFuq2.png)
 
-### Settings
+## Settings
 
 The only default setting is the `gutter` size which, by default, is set to `2%`, can be overridden. Any percentage value, including `0` to remove it, can be used.
 
@@ -68,10 +68,10 @@ li { @include column(1 of 3, 0%); }
 li { @include column(1 of 3, 10%); }
 ```
 
-### Support
+## Support
 
 Honestly I didn't do too many compatibility testing. But I would say major modern browsers can handle it pretty much perfect.
 
-## Author
+### Author
 
 Fran Pérez [@mrrocks](http://twitter.com/mrrocks)
