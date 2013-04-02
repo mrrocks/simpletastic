@@ -1,4 +1,4 @@
-![Simpletastic](http://i.imgur.com/vyJF44t.png)
+![Simpletastic](http://i.imgur.com/gHeZUdr.png)
 
 Simplestastic is a super lightweight framework (actually just **a few lines** of code) written in Sass that greatly simplifies the creation of fluid grids on responsive enviroments. It is designed for people tired of complex frameworks with tons of, sometimes, useless options, who want to write something quick and simple.
 
