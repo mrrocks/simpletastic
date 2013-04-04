@@ -47,6 +47,8 @@
         font-size: 14px;
     }
 
+    ul, li { margin: 0; padding: 0; }
+
     section {
         @extend %row;
         background-color: $margin-green;
@@ -77,15 +79,16 @@
 
     .example-nested > div {
 
-        &:nth-child(1) { @include column(1 of 4); }
-        &:nth-child(2) { @include column(3 of 4); background-color: $margin-green; padding: 0;}
+        &:nth-child(1) { @include column(1 of 4);}
+        &:nth-child(2) { @include column(3 of 4); background-color: $medium-blue; padding: 20px 0 0 0;}
 
-        > div {
+        > ul {
             @extend %row;
-            background-color: $medium-blue;
+            background-color: $margin-green;
+            margin-top: 20px;
 
-            &:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
-            &:nth-child(3) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green;}
+            li:nth-child(1) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green; padding: 20px;}
+            li:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green; padding: 20px;}
         }
     }
 

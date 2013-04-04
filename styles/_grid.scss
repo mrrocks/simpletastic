@@ -9,13 +9,7 @@
 
 //  Extend this class to any columns container (clear-fix).
 
-    %row {
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-    }
+    %row { letter-spacing: -0.31em; }
 
 
 //  ★ FUNCTIONS
@@ -52,7 +46,10 @@
         $columns: nth($fractions, 1);
         $container-columns: nth($fractions, 3);
 
-        float: left;
+        display: inline-block;
+        letter-spacing: normal;
+        vertical-align: top;
+
         margin-right: $gutter-width;
         width: calculate-column-width($columns, $container-columns, $gutter-width);
 
