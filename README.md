@@ -4,6 +4,7 @@ Simplestastic is a super lightweight framework (actually just **a few lines** of
 
 Forget about calculating weird percentages or using magic numbers, inspired by [this article](http://csswizardry.com/2013/02/responsive-grid-systems-a-solution/) by Harry Roberts, instead of defining a class name like `.span-3` or `.large-6`, which has little meaning and is not very easy to memorize, let Simpletastic abstract these widths into comprehensible human-friendly fractions. For example: you can have 3 columns of which every one is **one third** of the available space `@include column (1, 3)`, or **one half** `@include column (1, 2)`, or even **four twelfths** `@include column (4, 12)`. Any combination that suits your needs is possible.
 
+It uses `display: inline-block` to place elements, so everything can be aligned vertically and horizontally.
 
 ### Requirements
 
