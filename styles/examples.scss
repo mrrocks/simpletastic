@@ -30,7 +30,11 @@
 //  ★ EXAMPLES
 
 
-    * { box-sizing: border-box;  }
+    * {
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+    }
 
     body {
         margin: 0 auto;
@@ -42,9 +46,9 @@
     h1 { margin: 1em 0; }
 
     div {
-        padding: 20px;
         background-color: $medium-blue;
         font-size: 14px;
+        padding: 20px;
     }
 
     ul, li { margin: 0; padding: 0; }
