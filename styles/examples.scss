@@ -40,7 +40,7 @@
         margin: 0 auto;
         margin: 5%;
         line-height: 1.5;
-        font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue", Helvetica, Arial;
     }
 
     h1 { margin: 1em 0; }
@@ -63,6 +63,9 @@
     .example-simple > div {
 
         &:nth-child(2n) { background-color: darken($medium-blue, 10%); }
+
+        @include column(1 of 4);
+        &:before { content: "@include column(1 of 4);"; }
 
         @include respond-to(wide-screens) {
             @include column(1 of 4);

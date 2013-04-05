@@ -21,7 +21,7 @@ body {
   margin: 0 auto;
   margin: 5%;
   line-height: 1.5;
-  font-family: "Helvetica Neue"; }
+  font-family: "Helvetica Neue", Helvetica, Arial; }
 
 h1 {
   margin: 1em 0; }
@@ -40,61 +40,70 @@ section {
   color: white;
   text-align: center; }
 
-.example-simple > div:nth-child(2n) {
-  background-color: #2d7bab; }
-@media only screen and (min-width: 1024px) {
-  .example-simple > div {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    /* IE < 8: fake inline-block */
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    margin-right: 2%;
-    width: 23.5%; }
-    .example-simple > div:last-of-type {
-      margin-right: 0; }
-    .example-simple > div:before {
-      content: "@include column(1 of 4);"; } }
-@media only screen and (min-width: 421px) and (max-width: 1023px) {
-  .example-simple > div {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    /* IE < 8: fake inline-block */
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    margin-right: 2%;
-    width: 49%; }
-    .example-simple > div:last-of-type {
-      margin-right: 0; }
-    .example-simple > div:nth-of-type(2n) {
-      margin-right: 0; }
-    .example-simple > div:before {
-      content: "@include column(2 of 4); & @include row-each(2);"; } }
-@media only screen and (max-width: 420px) {
-  .example-simple > div {
-    display: inline-block;
-    zoom: 1;
-    *display: inline;
-    /* IE < 8: fake inline-block */
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    margin-right: 2%;
-    width: 100%; }
-    .example-simple > div:last-of-type {
-      margin-right: 0; }
-    .example-simple > div:before {
-      content: "@include column(1 of 1);"; } }
+.example-simple > div {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  letter-spacing: normal;
+  word-spacing: normal;
+  vertical-align: top;
+  margin-right: 2%;
+  width: 23.5%; }
+  .example-simple > div:nth-child(2n) {
+    background-color: #2d7bab; }
+  .example-simple > div:last-of-type {
+    margin-right: 0; }
+  .example-simple > div:before {
+    content: "@include column(1 of 4);"; }
+  @media only screen and (min-width: 1024px) {
+    .example-simple > div {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      letter-spacing: normal;
+      word-spacing: normal;
+      vertical-align: top;
+      margin-right: 2%;
+      width: 23.5%; }
+      .example-simple > div:last-of-type {
+        margin-right: 0; }
+      .example-simple > div:before {
+        content: "@include column(1 of 4);"; } }
+  @media only screen and (min-width: 421px) and (max-width: 1023px) {
+    .example-simple > div {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      letter-spacing: normal;
+      word-spacing: normal;
+      vertical-align: top;
+      margin-right: 2%;
+      width: 49%; }
+      .example-simple > div:last-of-type {
+        margin-right: 0; }
+      .example-simple > div:nth-of-type(2n) {
+        margin-right: 0; }
+      .example-simple > div:before {
+        content: "@include column(2 of 4); & @include row-each(2);"; } }
+  @media only screen and (max-width: 420px) {
+    .example-simple > div {
+      display: inline-block;
+      *display: inline;
+      zoom: 1;
+      letter-spacing: normal;
+      word-spacing: normal;
+      vertical-align: top;
+      margin-right: 2%;
+      width: 100%; }
+      .example-simple > div:last-of-type {
+        margin-right: 0; }
+      .example-simple > div:before {
+        content: "@include column(1 of 1);"; } }
 
 .example-nested > div:nth-child(1) {
   display: inline-block;
-  zoom: 1;
   *display: inline;
-  /* IE < 8: fake inline-block */
+  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
@@ -104,9 +113,8 @@ section {
     margin-right: 0; }
 .example-nested > div:nth-child(2) {
   display: inline-block;
-  zoom: 1;
   *display: inline;
-  /* IE < 8: fake inline-block */
+  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
@@ -121,9 +129,8 @@ section {
   margin-top: 20px; }
   .example-nested > div > ul li:nth-child(1) {
     display: inline-block;
-    zoom: 1;
     *display: inline;
-    /* IE < 8: fake inline-block */
+    zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
@@ -135,9 +142,8 @@ section {
       margin-right: 0; }
   .example-nested > div > ul li:nth-child(2) {
     display: inline-block;
-    zoom: 1;
     *display: inline;
-    /* IE < 8: fake inline-block */
+    zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
@@ -150,9 +156,8 @@ section {
 
 .example-grid > div {
   display: inline-block;
-  zoom: 1;
   *display: inline;
-  /* IE < 8: fake inline-block */
+  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
