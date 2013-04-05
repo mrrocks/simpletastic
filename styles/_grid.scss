@@ -10,12 +10,12 @@
 //  Extend this class to any columns container (clear-fix).
 
     %row {
-      letter-spacing: -.31em; /* webkit: collapse white-space between units */
-      word-spacing: -.43em\0; /* IE9 + Opera */
-      word-spacing: -.43em\9; /* IE9 */
+        letter-spacing: -.31em; /* webkit: collapse white-space between units */
+        word-spacing: -.43em\0; /* IE9 + Opera */
+        word-spacing: -.43em\9; /* IE9 */
 
-      *letter-spacing: normal;
-      *word-spacing: -.43em;  /* IE 6/7 (IE7 sees the previous rule) */
+        *letter-spacing: normal;
+        *word-spacing: -.43em;  /* IE 6/7 (IE7 sees the previous rule) */
     }
 
 
