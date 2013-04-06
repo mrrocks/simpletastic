@@ -4,10 +4,7 @@ section, .example-nested > div > ul {
   word-spacing: -.43em\0;
   /* IE9 + Opera */
   word-spacing: -.43em\9;
-  /* IE9 */
-  *letter-spacing: normal;
-  *word-spacing: -.43em;
-  /* IE 6/7 (IE7 sees the previous rule) */ }
+  /* IE9 */ }
 
 * {
   -webkit-box-sizing: border-box;
@@ -42,8 +39,6 @@ section {
 
 .example-simple > div {
   display: inline-block;
-  *display: inline;
-  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
@@ -58,8 +53,6 @@ section {
   @media only screen and (min-width: 1024px) {
     .example-simple > div {
       display: inline-block;
-      *display: inline;
-      zoom: 1;
       letter-spacing: normal;
       word-spacing: normal;
       vertical-align: top;
@@ -72,8 +65,6 @@ section {
   @media only screen and (min-width: 421px) and (max-width: 1023px) {
     .example-simple > div {
       display: inline-block;
-      *display: inline;
-      zoom: 1;
       letter-spacing: normal;
       word-spacing: normal;
       vertical-align: top;
@@ -88,8 +79,6 @@ section {
   @media only screen and (max-width: 420px) {
     .example-simple > div {
       display: inline-block;
-      *display: inline;
-      zoom: 1;
       letter-spacing: normal;
       word-spacing: normal;
       vertical-align: top;
@@ -102,8 +91,6 @@ section {
 
 .example-nested > div:nth-child(1) {
   display: inline-block;
-  *display: inline;
-  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
@@ -113,8 +100,6 @@ section {
     margin-right: 0; }
 .example-nested > div:nth-child(2) {
   display: inline-block;
-  *display: inline;
-  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
@@ -129,8 +114,6 @@ section {
   margin-top: 20px; }
   .example-nested > div > ul li:nth-child(1) {
     display: inline-block;
-    *display: inline;
-    zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
@@ -142,8 +125,6 @@ section {
       margin-right: 0; }
   .example-nested > div > ul li:nth-child(2) {
     display: inline-block;
-    *display: inline;
-    zoom: 1;
     letter-spacing: normal;
     word-spacing: normal;
     vertical-align: top;
@@ -156,8 +137,6 @@ section {
 
 .example-grid > div {
   display: inline-block;
-  *display: inline;
-  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   vertical-align: top;
