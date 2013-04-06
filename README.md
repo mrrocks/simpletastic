@@ -6,6 +6,8 @@ Forget about calculating weird percentages or using magic numbers, inspired by [
 
 It uses `display: inline-block` to place elements, so everything can be aligned vertically and horizontally.
 
+[Check the code for all the examples](http://mrrocks.github.io/simpletastic/examples.html).
+
 ### Requirements
 
 - Sass 3.2+ (silent classes are used, which means that the classes never get compiled to CSS until they are explicitly expanded into another class.)

@@ -11,11 +11,6 @@
 
     %row {
         letter-spacing: -.31em; /* webkit: collapse white-space between units */
-        word-spacing: -.43em\0; /* IE9 + Opera */
-        word-spacing: -.43em\9; /* IE9 */
-
-        *letter-spacing: normal;
-        *word-spacing: -.43em;  /* IE 6/7 (IE7 sees the previous rule) */
     }
 
 
@@ -54,9 +49,7 @@
         $container-columns: nth($fractions, 3);
 
         display: inline-block;
-        zoom: 1; *display: inline; /* IE < 8: fake inline-block */
         letter-spacing: normal;
-        word-spacing: normal;
         vertical-align: top;
 
         margin-right: $gutter-width;
