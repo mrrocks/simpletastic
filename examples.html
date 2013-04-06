@@ -1,45 +1,47 @@
+<!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset='utf-8'>
-    <link rel="stylesheet" type="text/css" href="http://mrrocks.github.io/simpletastic/styles/examples.css">
+    <link rel="stylesheet" type="text/css" href="http://necolas.github.io/normalize.css/2.1.0/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/examples.css">
 </head>
 <body>
 
 <h1>Simple (and Responsive)</h1>
 
-<section class="example-simple">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-</section>
+<div class="row example-simple">
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+    <div class="column"></div>
+</div>
 
 <h1>Nested</h1>
 
-<section class="example-nested">
-    <div>@include column(1 of 3);</div>
-    <div>
+<section class="row example-nested">
+    <div class="column">@include column(1 of 3);</div>
+    <div class="column">
         @extend %row; @include column(3 of 4);
-        <ul>
-            <li>@include nested-column(1 of 2, 3 of 4);</li>
-            <li>@include nested-column(1 of 2, 3 of 4);</li>
+        <ul class="row">
+            <li class="column">@include nested-column(1 of 2, 3 of 4);</li>
+            <li class="column">@include nested-column(1 of 2, 3 of 4);</li>
         </ul>
     </div>
 </section>
 
 <h1>Automatic Rows</h1>
 
-<section class="example-grid">
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
-    <div>@include column(1 of 3); <br/> @include row-each(3);</div>
+<section class="row example-grid">
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
+    <div class="column">@include column(1 of 3); <br/> @include row-each(3);</div>
 </section>
 
 

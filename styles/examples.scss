@@ -1,4 +1,5 @@
-    @import "grid";
+@import "grid";
+
 
 //  ★ RESPONSIVE
 
@@ -17,6 +18,7 @@
         }
     }
 
+
 //  ★ COLORS
 
     $dark-blue: #2F7099;
@@ -26,6 +28,7 @@
 
     $dark-green: #2F8299;
     $light-green: #3FAECC;
+
 
 //  ★ EXAMPLES
 
@@ -37,70 +40,66 @@
     }
 
     body {
-        margin: 0 auto;
-        margin: 5%;
-        line-height: 1.5;
+        margin: 5% 10%;
         font-family: "Helvetica Neue", Helvetica, Arial;
     }
 
-    h1 { margin: 1em 0; }
-
-    div {
-        background-color: $medium-blue;
-        font-size: 14px;
-        padding: 20px;
+    h1 {
+        color: #999;
+        font-weight: 300;
     }
 
-    ul, li { margin: 0; padding: 0; }
 
-    section {
+    .row {
         @extend %row;
         background-color: $margin-green;
         color: white;
         text-align: center;
     }
 
-    .example-simple > div {
+    .column {
+        background-color: $medium-blue;
+        font-size: 14px;
+        padding: 20px;
+    }
 
-        @include column(1 of 4);
+
+    .example-simple > .column  {
 
         &:nth-child(2n) { background-color: darken($medium-blue, 10%); }
 
-        &:before { content: "@include column(1 of 4);"; }
+        @include respond-to(wide-screens) {
+            @include column(1 of 4);
+            &:before { content: "@include column(1 of 4);"; }
+        }
 
-        // @include respond-to(wide-screens) {
-        //     @include column(1 of 4);
-        //     &:before { content: "@include column(1 of 4);"; }
-        // }
+        @include respond-to(medium-screens) {
+            @include column(2 of 4);
+            @include row-each(2);
+            &:before { content: "@include column(2 of 4); & @include row-each(2);"; }
+        }
 
-        // @include respond-to(medium-screens) {
-        //     @include column(2 of 4);
-        //     @include row-each(2);
-        //     &:before { content: "@include column(2 of 4); & @include row-each(2);"; }
-        // }
-
-        // @include respond-to(handhelds) {
-        //     @include column(1 of 1);
-        //     &:before { content: "@include column(1 of 1);"; }
-        // }
-    }
-
-    .example-nested > div {
-
-        &:nth-child(1) { @include column(1 of 4);}
-        &:nth-child(2) { @include column(3 of 4); background-color: $medium-blue; padding: 20px 0 0 0;}
-
-        > ul {
-            @extend %row;
-            background-color: $margin-green;
-            margin-top: 20px;
-
-            li:nth-child(1) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green; padding: 20px;}
-            li:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green; padding: 20px;}
+        @include respond-to(handhelds) {
+            @include column(1 of 1);
+            &:before { content: "@include column(1 of 1);"; }
         }
     }
 
-    .example-grid > div {
+    .example-nested > .column {
+
+        &:nth-child(1) { @include column(1 of 4);}
+        &:nth-child(2) { @include column(3 of 4); background-color: $medium-blue; padding: 20px 0 0;}
+
+        > .row {
+            padding: 0;
+            margin: 20px 0 0;
+
+            .column:nth-child(1) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green; }
+            .column:nth-child(2) { @include nested-column(1 of 2, 3 of 4); background-color: $dark-green; }
+        }
+    }
+
+    .example-grid > .column {
         @include column(1 of 3);
         @include row-each(3);
     }

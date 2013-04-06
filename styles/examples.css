@@ -1,10 +1,6 @@
-section, .example-nested > div > ul {
+.row {
   letter-spacing: -.31em;
-  /* webkit: collapse white-space between units */
-  word-spacing: -.43em\0;
-  /* IE9 + Opera */
-  word-spacing: -.43em\9;
-  /* IE9 */ }
+  /* webkit: collapse white-space between units */ }
 
 * {
   -webkit-box-sizing: border-box;
@@ -15,96 +11,108 @@ section, .example-nested > div > ul {
   /* Opera/IE 8+ */ }
 
 body {
-  margin: 0 auto;
-  margin: 5%;
-  line-height: 1.5;
+  margin: 5% 10%;
   font-family: "Helvetica Neue", Helvetica, Arial; }
 
 h1 {
-  margin: 1em 0; }
+  color: #999;
+  font-weight: 300; }
 
-div {
-  background-color: #3f96cc;
-  font-size: 14px;
-  padding: 20px; }
-
-ul, li {
-  margin: 0;
-  padding: 0; }
-
-section {
+.row {
   background-color: #98e622;
   color: white;
   text-align: center; }
 
-.example-simple > div {
-  display: inline-block;
-  letter-spacing: normal;
-  word-spacing: normal;
-  vertical-align: top;
-  margin-right: 2%;
-  width: 23.5%; }
-  .example-simple > div:last-of-type {
-    margin-right: 0; }
-  .example-simple > div:nth-child(2n) {
-    background-color: #2d7bab; }
-  .example-simple > div:before {
-    content: "@include column(1 of 4);"; }
+.column {
+  background-color: #3f96cc;
+  font-size: 14px;
+  padding: 20px; }
 
-.example-nested > div:nth-child(1) {
+.example-simple > .column:nth-child(2n) {
+  background-color: #2d7bab; }
+@media only screen and (min-width: 1024px) {
+  .example-simple > .column {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+    margin-right: 2%;
+    width: 23.5%; }
+    .example-simple > .column:last-of-type {
+      margin-right: 0; }
+    .example-simple > .column:before {
+      content: "@include column(1 of 4);"; } }
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  .example-simple > .column {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+    margin-right: 2%;
+    width: 49%; }
+    .example-simple > .column:last-of-type {
+      margin-right: 0; }
+    .example-simple > .column:nth-of-type(2n) {
+      margin-right: 0; }
+    .example-simple > .column:before {
+      content: "@include column(2 of 4); & @include row-each(2);"; } }
+@media only screen and (max-width: 420px) {
+  .example-simple > .column {
+    display: inline-block;
+    letter-spacing: normal;
+    vertical-align: top;
+    margin-right: 2%;
+    width: 100%; }
+    .example-simple > .column:last-of-type {
+      margin-right: 0; }
+    .example-simple > .column:before {
+      content: "@include column(1 of 1);"; } }
+
+.example-nested > .column:nth-child(1) {
   display: inline-block;
   letter-spacing: normal;
-  word-spacing: normal;
   vertical-align: top;
   margin-right: 2%;
   width: 23.5%; }
-  .example-nested > div:nth-child(1):last-of-type {
+  .example-nested > .column:nth-child(1):last-of-type {
     margin-right: 0; }
-.example-nested > div:nth-child(2) {
+.example-nested > .column:nth-child(2) {
   display: inline-block;
   letter-spacing: normal;
-  word-spacing: normal;
   vertical-align: top;
   margin-right: 2%;
   width: 74.5%;
   background-color: #3f96cc;
-  padding: 20px 0 0 0; }
-  .example-nested > div:nth-child(2):last-of-type {
+  padding: 20px 0 0; }
+  .example-nested > .column:nth-child(2):last-of-type {
     margin-right: 0; }
-.example-nested > div > ul {
-  background-color: #98e622;
-  margin-top: 20px; }
-  .example-nested > div > ul li:nth-child(1) {
+.example-nested > .column > .row {
+  padding: 0;
+  margin: 20px 0 0; }
+  .example-nested > .column > .row .column:nth-child(1) {
     display: inline-block;
     letter-spacing: normal;
-    word-spacing: normal;
     vertical-align: top;
     margin-right: 2.66667%;
     width: 48.66667%;
-    background-color: #2f8299;
-    padding: 20px; }
-    .example-nested > div > ul li:nth-child(1):last-of-type {
+    background-color: #2f8299; }
+    .example-nested > .column > .row .column:nth-child(1):last-of-type {
       margin-right: 0; }
-  .example-nested > div > ul li:nth-child(2) {
+  .example-nested > .column > .row .column:nth-child(2) {
     display: inline-block;
     letter-spacing: normal;
-    word-spacing: normal;
     vertical-align: top;
     margin-right: 2.66667%;
     width: 48.66667%;
-    background-color: #2f8299;
-    padding: 20px; }
-    .example-nested > div > ul li:nth-child(2):last-of-type {
+    background-color: #2f8299; }
+    .example-nested > .column > .row .column:nth-child(2):last-of-type {
       margin-right: 0; }
 
-.example-grid > div {
+.example-grid > .column {
   display: inline-block;
   letter-spacing: normal;
-  word-spacing: normal;
   vertical-align: top;
   margin-right: 2%;
   width: 32%; }
-  .example-grid > div:last-of-type {
+  .example-grid > .column:last-of-type {
     margin-right: 0; }
-  .example-grid > div:nth-of-type(3n) {
+  .example-grid > .column:nth-of-type(3n) {
     margin-right: 0; }
