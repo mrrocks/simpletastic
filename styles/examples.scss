@@ -62,26 +62,27 @@
 
     .example-simple > div {
 
+        @include column(1 of 4);
+
         &:nth-child(2n) { background-color: darken($medium-blue, 10%); }
 
-        @include column(1 of 4);
         &:before { content: "@include column(1 of 4);"; }
 
-        @include respond-to(wide-screens) {
-            @include column(1 of 4);
-            &:before { content: "@include column(1 of 4);"; }
-        }
+        // @include respond-to(wide-screens) {
+        //     @include column(1 of 4);
+        //     &:before { content: "@include column(1 of 4);"; }
+        // }
 
-        @include respond-to(medium-screens) {
-            @include column(2 of 4);
-            @include row-each(2);
-            &:before { content: "@include column(2 of 4); & @include row-each(2);"; }
-        }
+        // @include respond-to(medium-screens) {
+        //     @include column(2 of 4);
+        //     @include row-each(2);
+        //     &:before { content: "@include column(2 of 4); & @include row-each(2);"; }
+        // }
 
-        @include respond-to(handhelds) {
-            @include column(1 of 1);
-            &:before { content: "@include column(1 of 1);"; }
-        }
+        // @include respond-to(handhelds) {
+        //     @include column(1 of 1);
+        //     &:before { content: "@include column(1 of 1);"; }
+        // }
     }
 
     .example-nested > div {

@@ -44,50 +44,12 @@ section {
   vertical-align: top;
   margin-right: 2%;
   width: 23.5%; }
-  .example-simple > div:nth-child(2n) {
-    background-color: #2d7bab; }
   .example-simple > div:last-of-type {
     margin-right: 0; }
+  .example-simple > div:nth-child(2n) {
+    background-color: #2d7bab; }
   .example-simple > div:before {
     content: "@include column(1 of 4);"; }
-  @media only screen and (min-width: 1024px) {
-    .example-simple > div {
-      display: inline-block;
-      letter-spacing: normal;
-      word-spacing: normal;
-      vertical-align: top;
-      margin-right: 2%;
-      width: 23.5%; }
-      .example-simple > div:last-of-type {
-        margin-right: 0; }
-      .example-simple > div:before {
-        content: "@include column(1 of 4);"; } }
-  @media only screen and (min-width: 421px) and (max-width: 1023px) {
-    .example-simple > div {
-      display: inline-block;
-      letter-spacing: normal;
-      word-spacing: normal;
-      vertical-align: top;
-      margin-right: 2%;
-      width: 49%; }
-      .example-simple > div:last-of-type {
-        margin-right: 0; }
-      .example-simple > div:nth-of-type(2n) {
-        margin-right: 0; }
-      .example-simple > div:before {
-        content: "@include column(2 of 4); & @include row-each(2);"; } }
-  @media only screen and (max-width: 420px) {
-    .example-simple > div {
-      display: inline-block;
-      letter-spacing: normal;
-      word-spacing: normal;
-      vertical-align: top;
-      margin-right: 2%;
-      width: 100%; }
-      .example-simple > div:last-of-type {
-        margin-right: 0; }
-      .example-simple > div:before {
-        content: "@include column(1 of 1);"; } }
 
 .example-nested > div:nth-child(1) {
   display: inline-block;
