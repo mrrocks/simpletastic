@@ -6,7 +6,7 @@ Forget about calculating weird percentages or using magic numbers, inspired by [
 
 It uses `display: inline-block` to place elements, so everything can be aligned vertically and horizontally.
 
-[Check the code for all the examples](http://mrrocks.github.io/simpletastic/examples.html).
+Check all the examples [here](http://mrrocks.github.io/simpletastic/examples.html).
 
 ### Requirements
 
@@ -73,7 +73,7 @@ li { @include column(1 of 3, 10%); }
 
 ## Support
 
-Honestly I didn't do too many compatibility tests. But I would say major modern browsers can handle it pretty much perfectly.
+IE 9 +, Chrome and Firefox lastest versions.
 
 ### Author
 
